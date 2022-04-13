@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://rasedul20:rasedul20@telegramproject.gwtce.mongodb.net/groupHandlerBot',{useNewUrlParser:true,useUnifiedTopology:true}).catch((e)=>{
+mongoose.connect('mongodb+srv://rasedul20:rasedul20@telegramproject.b9su4.mongodb.net/telegramProject?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true}).catch((e)=>{
         console.log(e)
 }).then((d)=>console.log('Database connected')).catch((e)=>console.log(e))
 
@@ -34,7 +34,7 @@ const newSchema = new mongoose.Schema({
 
 },{versionKey: false})
 
-const User = mongoose.model('user',newSchema)
+const User = mongoose.model('withdrawl_request_list',newSchema)
 
 const app = express();
 
