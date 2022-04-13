@@ -46,7 +46,7 @@ app.get("/",async (req,res)=>{
             htdata = htdata+`
             <tr>
                 <td>${data.userId}<td/>
-                <td>${data.userName}<td/>
+                <td>${data.userName || 'No Username'}<td/>
                 <td>${data.name}<td/>
                 <td>${data.email}<td/>
                 <td>${data.crypto}<td/>
